@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1EDCC2427669453005E2CF7 /* PerfectClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC2327669453005E2CF7 /* PerfectClipApp.swift */; };
+		D1EDCC2627669453005E2CF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC2527669453005E2CF7 /* ContentView.swift */; };
+		D1EDCC2827669454005E2CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1EDCC2727669454005E2CF7 /* Assets.xcassets */; };
+		D1EDCC2B27669454005E2CF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1EDCC2A27669454005E2CF7 /* Preview Assets.xcassets */; };
+		D1EDCC3627669454005E2CF7 /* PerfectClipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC3527669454005E2CF7 /* PerfectClipTests.swift */; };
+		D1EDCC4027669454005E2CF7 /* PerfectClipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC3F27669454005E2CF7 /* PerfectClipUITests.swift */; };
+		D1EDCC4227669454005E2CF7 /* PerfectClipUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC4127669454005E2CF7 /* PerfectClipUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1EDCC3227669454005E2CF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1EDCC1827669453005E2CF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1EDCC1F27669453005E2CF7;
+			remoteInfo = PerfectClip;
+		};
+		D1EDCC3C27669454005E2CF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1EDCC1827669453005E2CF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1EDCC1F27669453005E2CF7;
+			remoteInfo = PerfectClip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D1EDCC2027669453005E2CF7 /* PerfectClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1EDCC2327669453005E2CF7 /* PerfectClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectClipApp.swift; sourceTree = "<group>"; };
+		D1EDCC2527669453005E2CF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D1EDCC2727669454005E2CF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1EDCC2A27669454005E2CF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D1EDCC2C27669454005E2CF7 /* PerfectClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PerfectClip.entitlements; sourceTree = "<group>"; };
+		D1EDCC3127669454005E2CF7 /* PerfectClipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerfectClipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1EDCC3527669454005E2CF7 /* PerfectClipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectClipTests.swift; sourceTree = "<group>"; };
+		D1EDCC3B27669454005E2CF7 /* PerfectClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerfectClipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1EDCC3F27669454005E2CF7 /* PerfectClipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectClipUITests.swift; sourceTree = "<group>"; };
+		D1EDCC4127669454005E2CF7 /* PerfectClipUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectClipUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1EDCC1D27669453005E2CF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1EDCC2E27669454005E2CF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1EDCC3827669454005E2CF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1EDCC1727669453005E2CF7 = {
+			isa = PBXGroup;
+			children = (
+				D1EDCC2227669453005E2CF7 /* PerfectClip */,
+				D1EDCC3427669454005E2CF7 /* PerfectClipTests */,
+				D1EDCC3E27669454005E2CF7 /* PerfectClipUITests */,
+				D1EDCC2127669453005E2CF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1EDCC2127669453005E2CF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1EDCC2027669453005E2CF7 /* PerfectClip.app */,
+				D1EDCC3127669454005E2CF7 /* PerfectClipTests.xctest */,
+				D1EDCC3B27669454005E2CF7 /* PerfectClipUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1EDCC2227669453005E2CF7 /* PerfectClip */ = {
+			isa = PBXGroup;
+			children = (
+				D1EDCC2327669453005E2CF7 /* PerfectClipApp.swift */,
+				D1EDCC2527669453005E2CF7 /* ContentView.swift */,
+				D1EDCC2727669454005E2CF7 /* Assets.xcassets */,
+				D1EDCC2C27669454005E2CF7 /* PerfectClip.entitlements */,
+				D1EDCC2927669454005E2CF7 /* Preview Content */,
+			);
+			path = PerfectClip;
+			sourceTree = "<group>";
+		};
+		D1EDCC2927669454005E2CF7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D1EDCC2A27669454005E2CF7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D1EDCC3427669454005E2CF7 /* PerfectClipTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1EDCC3527669454005E2CF7 /* PerfectClipTests.swift */,
+			);
+			path = PerfectClipTests;
+			sourceTree = "<group>";
+		};
+		D1EDCC3E27669454005E2CF7 /* PerfectClipUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D1EDCC3F27669454005E2CF7 /* PerfectClipUITests.swift */,
+				D1EDCC4127669454005E2CF7 /* PerfectClipUITestsLaunchTests.swift */,
+			);
+			path = PerfectClipUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1EDCC1F27669453005E2CF7 /* PerfectClip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1EDCC4527669454005E2CF7 /* Build configuration list for PBXNativeTarget "PerfectClip" */;
+			buildPhases = (
+				D1EDCC1C27669453005E2CF7 /* Sources */,
+				D1EDCC1D27669453005E2CF7 /* Frameworks */,
+				D1EDCC1E27669453005E2CF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerfectClip;
+			productName = PerfectClip;
+			productReference = D1EDCC2027669453005E2CF7 /* PerfectClip.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1EDCC3027669454005E2CF7 /* PerfectClipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1EDCC4827669454005E2CF7 /* Build configuration list for PBXNativeTarget "PerfectClipTests" */;
+			buildPhases = (
+				D1EDCC2D27669454005E2CF7 /* Sources */,
+				D1EDCC2E27669454005E2CF7 /* Frameworks */,
+				D1EDCC2F27669454005E2CF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1EDCC3327669454005E2CF7 /* PBXTargetDependency */,
+			);
+			name = PerfectClipTests;
+			productName = PerfectClipTests;
+			productReference = D1EDCC3127669454005E2CF7 /* PerfectClipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D1EDCC3A27669454005E2CF7 /* PerfectClipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1EDCC4B27669454005E2CF7 /* Build configuration list for PBXNativeTarget "PerfectClipUITests" */;
+			buildPhases = (
+				D1EDCC3727669454005E2CF7 /* Sources */,
+				D1EDCC3827669454005E2CF7 /* Frameworks */,
+				D1EDCC3927669454005E2CF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1EDCC3D27669454005E2CF7 /* PBXTargetDependency */,
+			);
+			name = PerfectClipUITests;
+			productName = PerfectClipUITests;
+			productReference = D1EDCC3B27669454005E2CF7 /* PerfectClipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1EDCC1827669453005E2CF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					D1EDCC1F27669453005E2CF7 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					D1EDCC3027669454005E2CF7 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = D1EDCC1F27669453005E2CF7;
+					};
+					D1EDCC3A27669454005E2CF7 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = D1EDCC1F27669453005E2CF7;
+					};
+				};
+			};
+			buildConfigurationList = D1EDCC1B27669453005E2CF7 /* Build configuration list for PBXProject "PerfectClip" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1EDCC1727669453005E2CF7;
+			productRefGroup = D1EDCC2127669453005E2CF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1EDCC1F27669453005E2CF7 /* PerfectClip */,
+				D1EDCC3027669454005E2CF7 /* PerfectClipTests */,
+				D1EDCC3A27669454005E2CF7 /* PerfectClipUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1EDCC1E27669453005E2CF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1EDCC2B27669454005E2CF7 /* Preview Assets.xcassets in Resources */,
+				D1EDCC2827669454005E2CF7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1EDCC2F27669454005E2CF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1EDCC3927669454005E2CF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1EDCC1C27669453005E2CF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1EDCC2627669453005E2CF7 /* ContentView.swift in Sources */,
+				D1EDCC2427669453005E2CF7 /* PerfectClipApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1EDCC2D27669454005E2CF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1EDCC3627669454005E2CF7 /* PerfectClipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1EDCC3727669454005E2CF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1EDCC4227669454005E2CF7 /* PerfectClipUITestsLaunchTests.swift in Sources */,
+				D1EDCC4027669454005E2CF7 /* PerfectClipUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1EDCC3327669454005E2CF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1EDCC1F27669453005E2CF7 /* PerfectClip */;
+			targetProxy = D1EDCC3227669454005E2CF7 /* PBXContainerItemProxy */;
+		};
+		D1EDCC3D27669454005E2CF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1EDCC1F27669453005E2CF7 /* PerfectClip */;
+			targetProxy = D1EDCC3C27669454005E2CF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D1EDCC4327669454005E2CF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D1EDCC4427669454005E2CF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		D1EDCC4627669454005E2CF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PerfectClip/PerfectClip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PerfectClip/Preview Content\"";
+				DEVELOPMENT_TEAM = T4FMYB4338;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Petar-Petrov.PerfectClip";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D1EDCC4727669454005E2CF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PerfectClip/PerfectClip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PerfectClip/Preview Content\"";
+				DEVELOPMENT_TEAM = T4FMYB4338;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Petar-Petrov.PerfectClip";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D1EDCC4927669454005E2CF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T4FMYB4338;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Petar-Petrov.PerfectClipTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerfectClip.app/Contents/MacOS/PerfectClip";
+			};
+			name = Debug;
+		};
+		D1EDCC4A27669454005E2CF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T4FMYB4338;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Petar-Petrov.PerfectClipTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerfectClip.app/Contents/MacOS/PerfectClip";
+			};
+			name = Release;
+		};
+		D1EDCC4C27669454005E2CF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T4FMYB4338;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Petar-Petrov.PerfectClipUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PerfectClip;
+			};
+			name = Debug;
+		};
+		D1EDCC4D27669454005E2CF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T4FMYB4338;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Petar-Petrov.PerfectClipUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = PerfectClip;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1EDCC1B27669453005E2CF7 /* Build configuration list for PBXProject "PerfectClip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1EDCC4327669454005E2CF7 /* Debug */,
+				D1EDCC4427669454005E2CF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1EDCC4527669454005E2CF7 /* Build configuration list for PBXNativeTarget "PerfectClip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1EDCC4627669454005E2CF7 /* Debug */,
+				D1EDCC4727669454005E2CF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1EDCC4827669454005E2CF7 /* Build configuration list for PBXNativeTarget "PerfectClipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1EDCC4927669454005E2CF7 /* Debug */,
+				D1EDCC4A27669454005E2CF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1EDCC4B27669454005E2CF7 /* Build configuration list for PBXNativeTarget "PerfectClipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1EDCC4C27669454005E2CF7 /* Debug */,
+				D1EDCC4D27669454005E2CF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1EDCC1827669453005E2CF7 /* Project object */;
+}
