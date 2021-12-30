@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D10CD47A277DE3ED001F9024 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = D10CD479277DE3ED001F9024 /* HotKey */; };
 		D1EDCC2427669453005E2CF7 /* PerfectClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC2327669453005E2CF7 /* PerfectClipApp.swift */; };
 		D1EDCC2627669453005E2CF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC2527669453005E2CF7 /* ContentView.swift */; };
 		D1EDCC2827669454005E2CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1EDCC2727669454005E2CF7 /* Assets.xcassets */; };
@@ -14,6 +15,12 @@
 		D1EDCC3627669454005E2CF7 /* PerfectClipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC3527669454005E2CF7 /* PerfectClipTests.swift */; };
 		D1EDCC4027669454005E2CF7 /* PerfectClipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC3F27669454005E2CF7 /* PerfectClipUITests.swift */; };
 		D1EDCC4227669454005E2CF7 /* PerfectClipUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC4127669454005E2CF7 /* PerfectClipUITestsLaunchTests.swift */; };
+		D1EDCC4F276694BD005E2CF7 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC4E276694BD005E2CF7 /* StatusBarController.swift */; };
+		D1EDCC522766A253005E2CF7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC512766A253005E2CF7 /* MenuView.swift */; };
+		D1EDCC552767D0A1005E2CF7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC532767D0A1005E2CF7 /* Model.xcdatamodeld */; };
+		D1EDCC572767D483005E2CF7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC562767D483005E2CF7 /* Store.swift */; };
+		D1EDCC5B2767D596005E2CF7 /* ClipboardItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC592767D596005E2CF7 /* ClipboardItem+CoreDataClass.swift */; };
+		D1EDCC5C2767D596005E2CF7 /* ClipboardItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC5A2767D596005E2CF7 /* ClipboardItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		D1EDCC3B27669454005E2CF7 /* PerfectClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerfectClipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EDCC3F27669454005E2CF7 /* PerfectClipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectClipUITests.swift; sourceTree = "<group>"; };
 		D1EDCC4127669454005E2CF7 /* PerfectClipUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectClipUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D1EDCC4E276694BD005E2CF7 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		D1EDCC5027669A9A005E2CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D1EDCC512766A253005E2CF7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		D1EDCC542767D0A1005E2CF7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D1EDCC562767D483005E2CF7 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		D1EDCC592767D596005E2CF7 /* ClipboardItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClipboardItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D1EDCC5A2767D596005E2CF7 /* ClipboardItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClipboardItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D10CD47A277DE3ED001F9024 /* HotKey in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +90,8 @@
 		D1EDCC1727669453005E2CF7 = {
 			isa = PBXGroup;
 			children = (
+				D1EDCC592767D596005E2CF7 /* ClipboardItem+CoreDataClass.swift */,
+				D1EDCC5A2767D596005E2CF7 /* ClipboardItem+CoreDataProperties.swift */,
 				D1EDCC2227669453005E2CF7 /* PerfectClip */,
 				D1EDCC3427669454005E2CF7 /* PerfectClipTests */,
 				D1EDCC3E27669454005E2CF7 /* PerfectClipUITests */,
@@ -95,11 +112,16 @@
 		D1EDCC2227669453005E2CF7 /* PerfectClip */ = {
 			isa = PBXGroup;
 			children = (
+				D1EDCC5027669A9A005E2CF7 /* Info.plist */,
+				D1EDCC4E276694BD005E2CF7 /* StatusBarController.swift */,
 				D1EDCC2327669453005E2CF7 /* PerfectClipApp.swift */,
 				D1EDCC2527669453005E2CF7 /* ContentView.swift */,
 				D1EDCC2727669454005E2CF7 /* Assets.xcassets */,
 				D1EDCC2C27669454005E2CF7 /* PerfectClip.entitlements */,
 				D1EDCC2927669454005E2CF7 /* Preview Content */,
+				D1EDCC512766A253005E2CF7 /* MenuView.swift */,
+				D1EDCC532767D0A1005E2CF7 /* Model.xcdatamodeld */,
+				D1EDCC562767D483005E2CF7 /* Store.swift */,
 			);
 			path = PerfectClip;
 			sourceTree = "<group>";
@@ -145,6 +167,9 @@
 			dependencies = (
 			);
 			name = PerfectClip;
+			packageProductDependencies = (
+				D10CD479277DE3ED001F9024 /* HotKey */,
+			);
 			productName = PerfectClip;
 			productReference = D1EDCC2027669453005E2CF7 /* PerfectClip.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +242,9 @@
 				Base,
 			);
 			mainGroup = D1EDCC1727669453005E2CF7;
+			packageReferences = (
+				D10CD478277DE3ED001F9024 /* XCRemoteSwiftPackageReference "HotKey" */,
+			);
 			productRefGroup = D1EDCC2127669453005E2CF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +288,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1EDCC2627669453005E2CF7 /* ContentView.swift in Sources */,
+				D1EDCC522766A253005E2CF7 /* MenuView.swift in Sources */,
+				D1EDCC552767D0A1005E2CF7 /* Model.xcdatamodeld in Sources */,
+				D1EDCC5C2767D596005E2CF7 /* ClipboardItem+CoreDataProperties.swift in Sources */,
+				D1EDCC5B2767D596005E2CF7 /* ClipboardItem+CoreDataClass.swift in Sources */,
+				D1EDCC572767D483005E2CF7 /* Store.swift in Sources */,
+				D1EDCC4F276694BD005E2CF7 /* StatusBarController.swift in Sources */,
 				D1EDCC2427669453005E2CF7 /* PerfectClipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +460,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PerfectClip/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,6 +488,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PerfectClip/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -602,6 +638,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D10CD478277DE3ED001F9024 /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D10CD479277DE3ED001F9024 /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D10CD478277DE3ED001F9024 /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D1EDCC532767D0A1005E2CF7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D1EDCC542767D0A1005E2CF7 /* Model.xcdatamodel */,
+			);
+			currentVersion = D1EDCC542767D0A1005E2CF7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D1EDCC1827669453005E2CF7 /* Project object */;
 }

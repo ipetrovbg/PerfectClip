@@ -9,8 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        VStack {
+        
+            Text("Perfect Clipboard Manager")
+                .font(.headline)
+                .padding(.bottom)
+            HStack {
+            Text("Shortcut:")
+                    .font(.caption)
+                Text("Cmd + Shift + Space")
+                    .font(.subheadline)
+                
+            }
+        }
+        
     }
 }
 
