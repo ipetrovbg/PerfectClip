@@ -13,6 +13,7 @@ import SwiftUI
 class Store: NSObject, ObservableObject {
     @Published var clipboardItems: [ClipboardItem] = []
     @Published var searchText: String = ""
+    @Published var focusedIndex = -1
     private var controller: NSFetchedResultsController<ClipboardItem>
     private var context: NSManagedObjectContext
 

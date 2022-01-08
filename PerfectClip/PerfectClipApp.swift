@@ -35,9 +35,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 return
             }
 
-            hotKey.keyDownHandler = {
-                if let menuButton = self.statusItem?.button {
-                    self.popover.show(relativeTo: menuButton.bounds, of: menuButton, preferredEdge: NSRectEdge.minY)
+            hotKey.keyDownHandler = { [weak self] in
+                if let strongSelf = self {
+                    if let menuButton = strongSelf.statusItem?.button {
+                        strongSelf.popover.show(relativeTo: menuButton.bounds, of: menuButton, preferredEdge: NSRectEdge.minY)
+                    }
                 }
             }
         }

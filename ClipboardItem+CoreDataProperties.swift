@@ -14,8 +14,8 @@ extension ClipboardItem {
     
     @nonobjc public class func fetchRequest(q: String?) -> NSFetchRequest<ClipboardItem> {
         let request = NSFetchRequest<ClipboardItem>(entityName: "ClipboardItem")
-        request.fetchBatchSize = 100
-        request.fetchLimit = 200
+        request.fetchBatchSize = 10
+        request.fetchLimit = 20
         let createdAtSortDescriptor = NSSortDescriptor(key: "createdAt", ascending: false)
         request.sortDescriptors = [createdAtSortDescriptor]
         if let textQuery = q, !textQuery.isEmpty {
