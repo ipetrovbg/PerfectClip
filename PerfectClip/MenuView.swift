@@ -8,26 +8,6 @@
 import SwiftUI
 
 
-struct KeyEventHandling: NSViewRepresentable {
-    class KeyView: NSView {
-        override var acceptsFirstResponder: Bool { true }
-        override func keyDown(with event: NSEvent) {
-            print(">> key \(event.keyCode)")
-        }
-    }
-    
-    func makeNSView(context: Context) -> NSView {
-        let view = KeyView()
-        //        DispatchQueue.main.async { // wait till next event cycle
-        //            view.window?.makeFirstResponder(view)
-        //        }
-        return view
-    }
-    
-    func updateNSView(_ nsView: NSView, context: Context) {
-    }
-}
-
 struct EnumeratedForEach<ItemType, ContentView: View>: View {
     let data: [ItemType]
     let content: (Int, ItemType) -> ContentView
@@ -59,10 +39,6 @@ struct MenuView: View {
         VStack {
             ScrollViewReader { scrollProxy in
                 HStack {
-                    
-//                                        TextField(text: $store.searchText) {
-//                                            Text("Search through your clips")
-//                                        }
                     SearchField(text: $store.searchText)
                         .onMoveUp {
                             if store.focusedIndex > 0 {

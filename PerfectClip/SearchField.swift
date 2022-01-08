@@ -1,15 +1,13 @@
 //
-//  SuggestionTextField.swift
-//  PubChemDemo
+//  SearchField.swift
+//  PerfectClip
 //
-//  Created by Stephan Michels on 27.08.20.
-//  Copyright © 2020 Stephan Michels. All rights reserved.
+//  Created by Petar Petrov on 13.12.21.
 //
 
 import AppKit
 import SwiftUI
 import Combine
-import HotKey
 
 // original code from https://developer.apple.com/library/archive/samplecode/CustomMenus
 
@@ -26,19 +24,11 @@ struct SearchField: NSViewRepresentable {
         _text = searchText
         makeCoordinator()
     }
-
+    
     func makeNSView(context: Context) -> NSSearchField {
-
-        let searchField = NSSearchField(frame: .zero)
-//        searchField.controlSize = .regular
-//        searchField.font = NSFont.systemFont(ofSize: NSFont.systemFontSize(for: searchField.controlSize))
-//        searchField.translatesAutoresizingMaskIntoConstraints = false
-//        searchField.setContentCompressionResistancePriority(NSLayoutConstraint.Priority(rawValue: 1), for: .horizontal)
-//        searchField.setContentHuggingPriority(NSLayoutConstraint.Priority(rawValue: 1), for: .horizontal)
-        searchField.delegate = context.coordinator
         
-//        let searchFieldCell = searchField.cell!
-//        searchFieldCell.lineBreakMode = .byWordWrapping
+        let searchField = NSSearchField(frame: .zero)
+        searchField.delegate = context.coordinator
         
         context.coordinator.searchField = searchField
         
@@ -66,40 +56,6 @@ struct SearchField: NSViewRepresentable {
     }
     
     func updateNSView(_ searchField: NSSearchField, context: Context) {
-//        let text = self.text
-//
-////        mutatingWrapper.coordinator = context.coordinator
-//
-//        mutatingWrapper.coordinator!.updatingSelectedRange = true
-//        defer {
-//            mutatingWrapper.coordinator!.updatingSelectedRange = false
-//        }
-//        searchField.stringValue = text
-//        if let selectedSuggestion = model.selectedSuggestion {
-//            let suggestionText = selectedSuggestion.text
-//
-//            if searchField.stringValue != suggestionText {
-//                searchField.stringValue = suggestionText
-//            }
-//
-//            if let fieldEditor = searchField.window?.fieldEditor(false, for: searchField) {
-//                if model.suggestionConfirmed {
-//                    let range = NSRange(suggestionText.startIndex..<suggestionText.endIndex, in: fieldEditor.string)
-//                    if fieldEditor.selectedRange != range {
-//                        fieldEditor.selectedRange = range
-//                    }
-//                } else if suggestionText.hasPrefix(text) {
-//                    let range = NSRange(suggestionText.index(suggestionText.startIndex, offsetBy: text.count)..<suggestionText.index(suggestionText.startIndex, offsetBy: suggestionText.count), in: fieldEditor.string)
-//                    if fieldEditor.selectedRange != range {
-//                        fieldEditor.selectedRange = range
-//                    }
-//                }
-//            }
-//        } else {
-//            if searchField.stringValue != self.text {
-//                searchField.stringValue = self.text
-//            }
-//        }
     }
     
     func makeCoordinator() -> Coordinator {
@@ -111,8 +67,6 @@ struct SearchField: NSViewRepresentable {
     
     class Coordinator: NSObject, NSSearchFieldDelegate {
         @Binding var text: String
-//        var didChangeSelectionSubscription: AnyCancellable?
-//        var frameDidChangeSubscription: AnyCancellable?
         var updatingSelectedRange: Bool = false
         var onMoveUp: (() -> ())? = nil
         var onMoveDown: (() -> ())? = nil
@@ -123,33 +77,14 @@ struct SearchField: NSViewRepresentable {
             _text = text
             
             super.init()
-            
-//            self.didChangeSelectionSubscription = NotificationCenter.default.publisher(for: NSTextView.didChangeSelectionNotification)
-//                .sink(receiveValue: { notification in
-//                    guard !self.updatingSelectedRange,
-//                          let fieldEditor = self.searchField.window?.fieldEditor(false, for: self.searchField),
-//                          let textView = notification.object as? NSTextView,
-//                          fieldEditor === textView else {
-//                        return
-//                    }
-//                })
         }
         
         var searchField: NSSearchField! {
             didSet {
-//                if let searchField = self.searchField {
-                    searchField.stringValue = self.text
-////                    searchField.postsFrameChangedNotifications = true
-////                    self.frameDidChangeSubscription = NotificationCenter.default.publisher(for: NSView.frameDidChangeNotification, object: searchField)
-////                        .sink(receiveValue: { (_) in
-////
-////                        })
-//                } else {
-////                    self.frameDidChangeSubscription = nil
-//                }
+                searchField.stringValue = self.text
             }
         }
-
+        
         // MARK: - NSSearchField Delegate Methods
         
         @objc func controlTextDidChange(_ notification: Notification) {
@@ -181,8 +116,6 @@ struct SearchField: NSViewRepresentable {
         
         
         @objc func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
-            
-            
             
             if commandSelector == #selector(NSResponder.moveUp(_:)) {
                 self.moveUp()
