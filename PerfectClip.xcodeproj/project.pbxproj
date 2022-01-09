@@ -16,7 +16,6 @@
 		D1EDCC3627669454005E2CF7 /* PerfectClipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC3527669454005E2CF7 /* PerfectClipTests.swift */; };
 		D1EDCC4027669454005E2CF7 /* PerfectClipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC3F27669454005E2CF7 /* PerfectClipUITests.swift */; };
 		D1EDCC4227669454005E2CF7 /* PerfectClipUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC4127669454005E2CF7 /* PerfectClipUITestsLaunchTests.swift */; };
-		D1EDCC4F276694BD005E2CF7 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC4E276694BD005E2CF7 /* StatusBarController.swift */; };
 		D1EDCC522766A253005E2CF7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC512766A253005E2CF7 /* MenuView.swift */; };
 		D1EDCC552767D0A1005E2CF7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC532767D0A1005E2CF7 /* Model.xcdatamodeld */; };
 		D1EDCC572767D483005E2CF7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC562767D483005E2CF7 /* Store.swift */; };
@@ -54,7 +53,6 @@
 		D1EDCC3B27669454005E2CF7 /* PerfectClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerfectClipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EDCC3F27669454005E2CF7 /* PerfectClipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectClipUITests.swift; sourceTree = "<group>"; };
 		D1EDCC4127669454005E2CF7 /* PerfectClipUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectClipUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D1EDCC4E276694BD005E2CF7 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		D1EDCC5027669A9A005E2CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D1EDCC512766A253005E2CF7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		D1EDCC542767D0A1005E2CF7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				D1EDCC5027669A9A005E2CF7 /* Info.plist */,
-				D1EDCC4E276694BD005E2CF7 /* StatusBarController.swift */,
 				D1EDCC2327669453005E2CF7 /* PerfectClipApp.swift */,
 				D1EDCC2527669453005E2CF7 /* ContentView.swift */,
 				D1EDCC2727669454005E2CF7 /* Assets.xcassets */,
@@ -297,7 +294,6 @@
 				D1EDCC5C2767D596005E2CF7 /* ClipboardItem+CoreDataProperties.swift in Sources */,
 				D1EDCC5B2767D596005E2CF7 /* ClipboardItem+CoreDataClass.swift in Sources */,
 				D1EDCC572767D483005E2CF7 /* Store.swift in Sources */,
-				D1EDCC4F276694BD005E2CF7 /* StatusBarController.swift in Sources */,
 				D1EDCC2427669453005E2CF7 /* PerfectClipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
