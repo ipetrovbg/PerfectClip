@@ -27,12 +27,22 @@ struct EnumeratedForEach<ItemType, ContentView: View>: View {
 struct MenuView: View {
     @ObservedObject var store: Store
     @State var sheetPresented = false
+    @State var copied = false
+    @State var copyWorker: DispatchWorkItem?
     
     func filter(item: ClipboardItem) -> Bool {
         if store.searchText.isEmpty {
             return true
         }
         return (item.text?.lowercased().contains(store.searchText.lowercased()) ?? false)
+    }
+    
+    func toggleCopyWorker() -> DispatchWorkItem {
+        DispatchWorkItem(block: {
+            withAnimation {
+                self.copied.toggle()
+            }
+        })
     }
     
     var body: some View {
@@ -47,6 +57,9 @@ struct MenuView: View {
                             withAnimation {
                                 scrollProxy.scrollTo(store.focusedIndex)
                             }
+                            copied = false
+                            copyWorker?.cancel()
+                            copyWorker = nil
                         }
                         .onMoveDown {
                             if store.focusedIndex < store.clipboardItems.filter(filter).count - 1 {
@@ -55,13 +68,22 @@ struct MenuView: View {
                             withAnimation {
                                 scrollProxy.scrollTo(store.focusedIndex)
                             }
+                            copied = false
+                            copyWorker?.cancel()
+                            copyWorker = nil
                         }
                         .onChange {
                             store.focusedIndex = -1
+                            copied = false
+                            copyWorker?.cancel()
+                            copyWorker = nil
                         }
                         .onSubmit {
                             store.focusedIndex = -1
                             store.fetchQuery()
+                            copied = false
+                            copyWorker?.cancel()
+                            copyWorker = nil
                         }
                     
                 }
@@ -74,27 +96,39 @@ struct MenuView: View {
                                 Text(item.text!)
                                     .frame(maxHeight: 50)
                                     .truncationMode(.tail)
-                                Spacer()
+                                
                                 Button("") {
                                     let item = Array(store.clipboardItems.enumerated()).first { inx, item in
                                         inx == store.focusedIndex
                                     }
                                     if let itm = item?.element, itm.text != nil {
+                                        copyWorker = toggleCopyWorker()
+                                        DispatchQueue.main.asyncAfter(deadline: .now(), execute: copyWorker!)
+                                        
                                         NSPasteboard.general.clearContents()
                                         NSPasteboard.general.setString(itm.text!, forType: .string)
+                                        copyWorker = toggleCopyWorker()
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: copyWorker!)
                                     }
                                 }
                                 .frame(width: 0)
                                 .hidden()
                                     .keyboardShortcut("c", modifiers: [.command])
-                                Button("copy") {
+                                Spacer()
+                                Button(action: {
                                     NSPasteboard.general.clearContents()
                                     NSPasteboard.general.setString(item.text!, forType: .string)
-                                }
-                                .overlay(
-                                    Capsule(style: .continuous)
-                                        .stroke(index == store.focusedIndex ? Color.accentColor : Color.primary.opacity(0), style: StrokeStyle(lineWidth: 2))
+                                }, label: {
+                                    Text(index == store.focusedIndex && copied ? "Copied" : "Copy")
+                                        .font(.caption)
+                                        .frame(width: 35)
+                                })
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 4.0)
+                                            .stroke(index == store.focusedIndex ? Color.accentColor : Color.primary.opacity(0),
+                                                    style: StrokeStyle(lineWidth: 2))
                                 )
+                                
                             }
                             
                             .padding(8)
@@ -106,13 +140,13 @@ struct MenuView: View {
             }
             HStack {
                 ZStack {
-                    Color.gray
+                    Color.accentColor
                     HStack {
-                        Text("v0.2")
+                        Text("v0.3")
                             .font(.system(size: 8))
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.white)
                     }
-                }.frame(width: 20, height: 20)
+                }.frame(width: 25, height: 25)
                     .cornerRadius(16)
                 Text("Perfect Clipboard")
                     .font(.system(size: 12))
