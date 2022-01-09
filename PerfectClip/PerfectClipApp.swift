@@ -28,6 +28,7 @@ func WatchPasteboard(copied: @escaping (_ copiedString:String) -> Void) {
 class AppDelegate: NSObject, NSApplicationDelegate {
     var popover = NSPopover.init()
     var statusItem: NSStatusItem?
+    var store: Store?
     
     private var hotKey: HotKey? {
         didSet {
@@ -38,6 +39,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             hotKey.keyDownHandler = { [weak self] in
                 if let strongSelf = self {
                     if let menuButton = strongSelf.statusItem?.button {
+                        self!.store!.fetchQuery()
+                        self!.store?.resetFocusIndex()
                         strongSelf.popover.show(relativeTo: menuButton.bounds, of: menuButton, preferredEdge: NSRectEdge.minY)
                     }
                 }
@@ -92,13 +95,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         hotKey = HotKey(keyCombo: KeyCombo(key: .space, modifiers: [.shift, .command]))
         
         // Create the SwiftUI view that provides the contents
-        let store = Store(managedObjectContext: persistentContainer.viewContext)
+        store = Store(managedObjectContext: persistentContainer.viewContext)
         
         WatchPasteboard {
-            store.createItem(text: $0)
+            self.store!.createItem(text: $0)
         }
         
-        let contentView = MenuView(store: store)
+        let contentView = MenuView(store: store!)
             .frame(height: 360)
 
         popover.animates = true

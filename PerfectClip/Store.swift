@@ -35,6 +35,10 @@ class Store: NSObject, ObservableObject {
         }
       }
     
+    func resetFocusIndex() {
+        self.focusedIndex = -1
+    }
+    
     func fetchQuery() {
         self.controller = NSFetchedResultsController(fetchRequest: ClipboardItem.fetchRequest(q: self.searchText),
                                                 managedObjectContext: self.context,
