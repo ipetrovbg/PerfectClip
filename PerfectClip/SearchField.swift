@@ -95,12 +95,6 @@ struct SearchField: NSViewRepresentable {
             }
         }
         
-        @objc func controlTextDidEndEditing(_ obj: Notification) {
-            if let submit = onSubmit {
-                submit()
-            }
-        }
-        
         @objc func moveUp() {
             if let move = onMoveUp {
                 move()
@@ -116,6 +110,12 @@ struct SearchField: NSViewRepresentable {
         
         
         @objc func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+            if commandSelector == #selector(NSResponder.insertNewline(_:)) {
+                if let submit = onSubmit {
+                    submit()
+                    return true
+                }
+            }
             
             if commandSelector == #selector(NSResponder.moveUp(_:)) {
                 self.moveUp()

@@ -77,6 +77,9 @@ struct MenuView: View {
                             copied = false
                             copyWorker?.cancel()
                             copyWorker = nil
+                            if store.searchText.isEmpty {
+                                store.fetchQuery()
+                            }
                         }
                         .onSubmit {
                             store.focusedIndex = -1

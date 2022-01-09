@@ -39,8 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             hotKey.keyDownHandler = { [weak self] in
                 if let strongSelf = self {
                     if let menuButton = strongSelf.statusItem?.button {
-                        self!.store!.fetchQuery()
-                        self!.store?.resetFocusIndex()
+//                        self!.store?.resetFocusIndex()
                         strongSelf.popover.show(relativeTo: menuButton.bounds, of: menuButton, preferredEdge: NSRectEdge.minY)
                     }
                 }
@@ -99,6 +98,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         WatchPasteboard {
             self.store!.createItem(text: $0)
+            self.store!.fetchQuery()
         }
         
         let contentView = MenuView(store: store!)
