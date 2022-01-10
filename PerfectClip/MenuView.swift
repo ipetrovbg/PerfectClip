@@ -62,7 +62,9 @@ struct MenuView: View {
                             copyWorker = nil
                         }
                         .onMoveDown {
-                            if store.focusedIndex < store.clipboardItems.filter(filter).count - 1 {
+                            let count = store.clipboardItems.filter(filter).count
+                            
+                            if store.focusedIndex < count - 1 {
                                 store.focusedIndex = store.focusedIndex + 1
                             }
                             withAnimation {
@@ -96,11 +98,7 @@ struct MenuView: View {
                     EnumeratedForEach(store.clipboardItems.filter(filter), content: { index, item in
                         VStack(alignment: .leading) {
                             HStack {
-                                Text(item.text!)
-                                    .frame(maxHeight: 50)
-                                    .truncationMode(.tail)
-                                
-                                Button("") {
+                                Button(action: {
                                     let item = Array(store.clipboardItems.enumerated()).first { inx, item in
                                         inx == store.focusedIndex
                                     }
@@ -113,11 +111,16 @@ struct MenuView: View {
                                         copyWorker = toggleCopyWorker()
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: copyWorker!)
                                     }
+                                }) {
+                                    Text(item.text!)
+                                        .frame(maxHeight: 50)
+                                        .truncationMode(.tail)
                                 }
-                                .frame(width: 0)
-                                .hidden()
-                                    .keyboardShortcut("c", modifiers: [.command])
+                                .buttonStyle(PlainButtonStyle())
+                                .keyboardShortcut("c", modifiers: [.command])
+                                
                                 Spacer()
+                                
                                 Button(action: {
                                     NSPasteboard.general.clearContents()
                                     NSPasteboard.general.setString(item.text!, forType: .string)
@@ -125,13 +128,11 @@ struct MenuView: View {
                                     Text(index == store.focusedIndex && copied ? "Copied" : "Copy")
                                         .font(.caption)
                                         .frame(width: 35)
-                                })
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 4.0)
-                                            .stroke(index == store.focusedIndex ? Color.accentColor : Color.primary.opacity(0),
-                                                    style: StrokeStyle(lineWidth: 2))
+                                }).overlay(
+                                    RoundedRectangle(cornerRadius: 4.0)
+                                        .stroke(index == store.focusedIndex ? Color.accentColor : Color.primary.opacity(0),
+                                                style: StrokeStyle(lineWidth: 2))
                                 )
-                                
                             }
                             
                             .padding(8)

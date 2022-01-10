@@ -36,7 +36,7 @@ class Store: NSObject, ObservableObject {
       }
     
     func resetFocusIndex() {
-        self.focusedIndex = -1
+        focusedIndex = -1
     }
     
     func fetchQuery() {
