@@ -1,5 +1,5 @@
 # PerfectClip
-Clipboard Management App for MacOS
+Simple clipboard management app for MacOS
 
 |Screenshots|
 |---|
