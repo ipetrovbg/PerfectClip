@@ -98,32 +98,38 @@ struct MenuView: View {
                     EnumeratedForEach(store.clipboardItems.filter(filter), content: { index, item in
                         VStack(alignment: .leading) {
                             HStack {
-                                Button(action: {
-                                    let item = Array(store.clipboardItems.enumerated()).first { inx, item in
+                                Text(item.text!)
+                                    .frame(maxHeight: 50)
+                                    .truncationMode(.tail)
+                                
+                                Button("copy") {
+                                    let item = Array(store.clipboardItems.filter(filter).enumerated()).first { inx, item in
                                         inx == store.focusedIndex
                                     }
+                                    
                                     if let itm = item?.element, itm.text != nil {
                                         copyWorker = toggleCopyWorker()
                                         DispatchQueue.main.asyncAfter(deadline: .now(), execute: copyWorker!)
-                                        
                                         NSPasteboard.general.clearContents()
                                         NSPasteboard.general.setString(itm.text!, forType: .string)
                                         copyWorker = toggleCopyWorker()
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: copyWorker!)
                                     }
-                                }) {
-                                    Text(item.text!)
-                                        .frame(maxHeight: 50)
-                                        .truncationMode(.tail)
                                 }
-                                .buttonStyle(PlainButtonStyle())
                                 .keyboardShortcut("c", modifiers: [.command])
+                                .frame(width: 0)
+                                .opacity(0)
                                 
                                 Spacer()
                                 
                                 Button(action: {
+                                    store.focusedIndex = index
+                                    copyWorker = toggleCopyWorker()
+                                    DispatchQueue.main.asyncAfter(deadline: .now(), execute: copyWorker!)
                                     NSPasteboard.general.clearContents()
                                     NSPasteboard.general.setString(item.text!, forType: .string)
+                                    copyWorker = toggleCopyWorker()
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: copyWorker!)
                                 }, label: {
                                     Text(index == store.focusedIndex && copied ? "Copied" : "Copy")
                                         .font(.caption)

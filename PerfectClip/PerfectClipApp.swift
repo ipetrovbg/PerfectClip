@@ -40,6 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if let strongSelf = self {
                     if let menuButton = strongSelf.statusItem?.button {
 //                        self!.store?.resetFocusIndex()
+                        self!.store!.fetchQuery()
                         strongSelf.popover.show(relativeTo: menuButton.bounds, of: menuButton, preferredEdge: NSRectEdge.minY)
                     }
                 }
@@ -98,7 +99,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         WatchPasteboard {
             self.store!.createItem(text: $0)
-            self.store!.fetchQuery()
+//            self.store!.fetchQuery()
         }
         
         let contentView = MenuView(store: store!)

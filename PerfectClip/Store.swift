@@ -59,8 +59,12 @@ class Store: NSObject, ObservableObject {
         
         do {
             let count = try self.context.count(for: request)
+            if count == 1 {
+                let item = try self.context.fetch(request).first
+                item?.createdAt = Date()
+            }
             return count > 0
-        }catch let error as NSError {
+        } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
             return false
         }
@@ -73,6 +77,8 @@ class Store: NSObject, ObservableObject {
                 let clipboardItem = ClipboardItem(context: self.context)
                 clipboardItem.text = text
                 clipboardItem.createdAt = Date()
+                try self.context.save()
+            } else {
                 try self.context.save()
             }
         } catch {
