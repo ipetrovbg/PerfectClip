@@ -91,16 +91,46 @@ struct MenuView: View {
                             copyWorker = nil
                         }
                     
+                    
                 }
                 .padding([.top, .leading, .trailing])
-                .padding(.bottom, 4)
+                HStack {
+                    Button("") {
+                        store.focusedIndex = 0
+                        withAnimation {
+                            scrollProxy.scrollTo(store.focusedIndex)
+                        }
+                    }
+                    .padding(0)
+                    .frame(width: 0, height: 0)
+                    .opacity(0)
+                    .keyboardShortcut(.upArrow, modifiers: [.option, .command])
+                    Button("") {
+                        let count = store.clipboardItems.filter(filter).count
+                        store.focusedIndex = count - 1
+                        withAnimation {
+                            scrollProxy.scrollTo(store.focusedIndex)
+                        }
+                    }
+                    .padding(0)
+                    .frame(width: 0, height: 0)
+                    .opacity(0)
+                    .keyboardShortcut(.downArrow, modifiers: [.option, .command])
+                }
                 ScrollView {
                     EnumeratedForEach(store.clipboardItems.filter(filter), content: { index, item in
                         VStack(alignment: .leading) {
                             HStack {
-                                Text(item.text!)
-                                    .frame(maxHeight: 50)
-                                    .truncationMode(.tail)
+                                if store.isCompact {
+                                    Text(item.text!)
+                                        .frame(maxHeight: 20)
+                                        .truncationMode(.tail)
+                                } else {
+                                    Text(item.text!)
+                                        .frame(maxHeight: 50)
+                                        .truncationMode(.tail)
+                                }
+                                
                                 
                                 Button("copy") {
                                     let item = Array(store.clipboardItems.filter(filter).enumerated()).first { inx, item in
@@ -140,11 +170,13 @@ struct MenuView: View {
                                                 style: StrokeStyle(lineWidth: 2))
                                 )
                             }
-                            
-                            .padding(8)
                             .frame(maxWidth: .infinity)
-                            Divider()
+                            .padding(.leading, store.isCompact ? 8 : 16)
+                            .padding(.trailing, store.isCompact ? 8 : 16)
+                            
+                            Divider().padding(store.isCompact ? 0 : 8)
                         }.id(index)
+                            .padding(.top, 4)
                     })
                 }
             }
@@ -152,7 +184,7 @@ struct MenuView: View {
                 ZStack {
                     Color.accentColor
                     HStack {
-                        Text("v0.3")
+                        Text("v0.4")
                             .font(.system(size: 8))
                             .foregroundColor(.white)
                     }
@@ -166,12 +198,22 @@ struct MenuView: View {
                 Button("Clear") {
                     sheetPresented.toggle()
                 }
-            }.padding(8)
+            }.padding(.trailing, 8)
+                .padding(.leading, 8)
                 .alert(isPresented: $sheetPresented, content: {
                     Alert(title: Text("History"), message: Text("Are you really sure you want to clear all copy history?"), primaryButton: .destructive(Text("Clear"), action: {
                         store.clearHistory(store.clipboardItems)
                     }), secondaryButton: .default(Text("Cancel")))
                 })
+            VStack {
+                HStack {
+                    Toggle(isOn: $store.isCompact) {
+                        Text("Compact View")
+                    }
+                    Spacer()
+                }
+            }.padding(.bottom, 8)
+                .padding(.leading, 8)
         }
     }
 }
