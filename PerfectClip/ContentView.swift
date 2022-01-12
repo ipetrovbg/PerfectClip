@@ -11,10 +11,22 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-        
+            
+            Image(systemName: "paperclip.circle.fill")
+                .resizable()
+                .frame(width: 30, height: 30)
+                .padding(.bottom)
+            
             Text("Perfect Clipboard Manager")
                 .font(.headline)
                 .padding(.bottom)
+            
+        }
+        .padding(.top)
+
+        Spacer()
+        
+        VStack {
             
             HStack {
                 Text("Shortcuts:")

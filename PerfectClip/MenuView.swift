@@ -184,7 +184,7 @@ struct MenuView: View {
                 ZStack {
                     Color.accentColor
                     HStack {
-                        Text("v0.4")
+                        Text("v0.5")
                             .font(.system(size: 8))
                             .foregroundColor(.white)
                     }
