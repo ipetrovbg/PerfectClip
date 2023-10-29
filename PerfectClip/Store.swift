@@ -41,8 +41,8 @@ class Store: NSObject, ObservableObject {
         focusedIndex = -1
     }
     
-    func fetchQuery() {
-        self.controller = NSFetchedResultsController(fetchRequest: ClipboardItem.fetchRequest(q: self.searchText),
+    func fetchQuery(_ limit: Int = 20) {
+        self.controller = NSFetchedResultsController(fetchRequest: ClipboardItem.fetchRequest(q: self.searchText, limit),
                                                 managedObjectContext: self.context,
         sectionNameKeyPath: nil, cacheName: nil)
 
@@ -73,7 +73,11 @@ class Store: NSObject, ObservableObject {
     }
     
     func createItem(text: String) {
-        
+        let len = text.lengthOfBytes(using: String.Encoding.utf8)
+        if len > 2000 {
+            return
+        }
+
         do {
             if !checkIfExist(text) {
                 let clipboardItem = ClipboardItem(context: self.context)
@@ -97,6 +101,19 @@ class Store: NSObject, ObservableObject {
             try self.context.save()
         } catch {
             print("Couldn't clear the clipboard history!")
+        }
+    }
+    
+    func deleteItem(_ item: ClipboardItem) {
+        do {
+            if item.text != nil && checkIfExist(item.text!) {
+                self.context.delete(item)
+            }
+
+            try self.context.save()
+            self.fetchQuery()
+        } catch {
+            print("Couldn't delete the item!")
         }
     }
 }

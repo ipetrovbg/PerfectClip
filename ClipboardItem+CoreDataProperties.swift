@@ -12,10 +12,10 @@ import CoreData
 
 extension ClipboardItem {
     
-    @nonobjc public class func fetchRequest(q: String?) -> NSFetchRequest<ClipboardItem> {
+    @nonobjc public class func fetchRequest(q: String?, _ limit: Int = 20) -> NSFetchRequest<ClipboardItem> {
         let request = NSFetchRequest<ClipboardItem>(entityName: "ClipboardItem")
         request.fetchBatchSize = 10
-        request.fetchLimit = 20
+        request.fetchLimit = limit
         let createdAtSortDescriptor = NSSortDescriptor(key: "createdAt", ascending: false)
         request.sortDescriptors = [createdAtSortDescriptor]
         if let textQuery = q, !textQuery.isEmpty {
@@ -31,6 +31,4 @@ extension ClipboardItem {
     
 }
 
-extension ClipboardItem : Identifiable {
-    
-}
+extension ClipboardItem : Identifiable {}

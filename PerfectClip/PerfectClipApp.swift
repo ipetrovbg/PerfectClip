@@ -101,7 +101,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         let contentView = MenuView(store: store!)
-            .frame(height: 500)
+            .frame(minHeight: 500)
 
         popover.animates = true
         popover.behavior = .transient
@@ -140,7 +140,6 @@ struct PerfectClipApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .frame(width: 300, height: 300)
         }
     }
 }

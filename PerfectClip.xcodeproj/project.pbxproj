@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		D10CD47A277DE3ED001F9024 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = D10CD479277DE3ED001F9024 /* HotKey */; };
 		D10CD47C278650BD001F9024 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10CD47B278650BD001F9024 /* SearchField.swift */; };
+		D176C13227C2B40600D0BF11 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176C13127C2B40600D0BF11 /* Extensions.swift */; };
+		D176C13427C2BF5C00D0BF11 /* ClipsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D176C13327C2BF5C00D0BF11 /* ClipsListView.swift */; };
+		D1BE855827C103A000C65FCE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BE855727C103A000C65FCE /* HomeView.swift */; };
+		D1BE855A27C1185F00C65FCE /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BE855927C1185F00C65FCE /* TabButton.swift */; };
 		D1EDCC2427669453005E2CF7 /* PerfectClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC2327669453005E2CF7 /* PerfectClipApp.swift */; };
 		D1EDCC2627669453005E2CF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EDCC2527669453005E2CF7 /* ContentView.swift */; };
 		D1EDCC2827669454005E2CF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1EDCC2727669454005E2CF7 /* Assets.xcassets */; };
@@ -42,6 +46,10 @@
 
 /* Begin PBXFileReference section */
 		D10CD47B278650BD001F9024 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
+		D176C13127C2B40600D0BF11 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D176C13327C2BF5C00D0BF11 /* ClipsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsListView.swift; sourceTree = "<group>"; };
+		D1BE855727C103A000C65FCE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D1BE855927C1185F00C65FCE /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 		D1EDCC2027669453005E2CF7 /* PerfectClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1EDCC2327669453005E2CF7 /* PerfectClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectClipApp.swift; sourceTree = "<group>"; };
 		D1EDCC2527669453005E2CF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +130,10 @@
 				D1EDCC532767D0A1005E2CF7 /* Model.xcdatamodeld */,
 				D1EDCC562767D483005E2CF7 /* Store.swift */,
 				D10CD47B278650BD001F9024 /* SearchField.swift */,
+				D1BE855727C103A000C65FCE /* HomeView.swift */,
+				D1BE855927C1185F00C65FCE /* TabButton.swift */,
+				D176C13127C2B40600D0BF11 /* Extensions.swift */,
+				D176C13327C2BF5C00D0BF11 /* ClipsListView.swift */,
 			);
 			path = PerfectClip;
 			sourceTree = "<group>";
@@ -287,13 +299,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1BE855827C103A000C65FCE /* HomeView.swift in Sources */,
 				D10CD47C278650BD001F9024 /* SearchField.swift in Sources */,
 				D1EDCC2627669453005E2CF7 /* ContentView.swift in Sources */,
+				D1BE855A27C1185F00C65FCE /* TabButton.swift in Sources */,
+				D176C13427C2BF5C00D0BF11 /* ClipsListView.swift in Sources */,
 				D1EDCC522766A253005E2CF7 /* MenuView.swift in Sources */,
 				D1EDCC552767D0A1005E2CF7 /* Model.xcdatamodeld in Sources */,
 				D1EDCC5C2767D596005E2CF7 /* ClipboardItem+CoreDataProperties.swift in Sources */,
 				D1EDCC5B2767D596005E2CF7 /* ClipboardItem+CoreDataClass.swift in Sources */,
 				D1EDCC572767D483005E2CF7 /* Store.swift in Sources */,
+				D176C13227C2B40600D0BF11 /* Extensions.swift in Sources */,
 				D1EDCC2427669453005E2CF7 /* PerfectClipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +382,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_PREVIEWS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -428,9 +445,11 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -442,7 +461,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
 		};

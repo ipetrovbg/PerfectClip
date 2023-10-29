@@ -180,6 +180,24 @@ struct MenuView: View {
                     })
                 }
             }
+
+            HStack {
+                VStack {
+                    HStack {
+                        Toggle(isOn: $store.isCompact) {
+                            Text("Compact View")
+                        }
+                        Spacer()
+                        
+                        Button("Clear") {
+                            sheetPresented.toggle()
+                        }
+                    }
+                }
+                .padding(.leading, 8)
+                .padding(.trailing, 8)
+            }
+
             HStack {
                 ZStack {
                     Color.accentColor
@@ -188,32 +206,24 @@ struct MenuView: View {
                             .font(.system(size: 8))
                             .foregroundColor(.white)
                     }
-                }.frame(width: 25, height: 25)
-                    .cornerRadius(16)
+                }
+                .frame(width: 25, height: 25)
+                .cornerRadius(16)
+                
                 Text("Perfect Clipboard")
                     .font(.system(size: 12))
                     .foregroundColor(.secondary)
                 
                 Spacer()
-                Button("Clear") {
-                    sheetPresented.toggle()
-                }
-            }.padding(.trailing, 8)
-                .padding(.leading, 8)
-                .alert(isPresented: $sheetPresented, content: {
-                    Alert(title: Text("History"), message: Text("Are you really sure you want to clear all copy history?"), primaryButton: .destructive(Text("Clear"), action: {
-                        store.clearHistory(store.clipboardItems)
-                    }), secondaryButton: .default(Text("Cancel")))
-                })
-            VStack {
-                HStack {
-                    Toggle(isOn: $store.isCompact) {
-                        Text("Compact View")
-                    }
-                    Spacer()
-                }
-            }.padding(.bottom, 8)
-                .padding(.leading, 8)
+            }
+            .padding(.trailing, 8)
+            .padding(.leading, 8)
+            .padding(.bottom, 8)
+            .alert(isPresented: $sheetPresented, content: {
+                Alert(title: Text("History"), message: Text("Are you really sure you want to clear all copy history?"), primaryButton: .destructive(Text("Clear"), action: {
+                    store.clearHistory(store.clipboardItems)
+                }), secondaryButton: .default(Text("Cancel")))
+            })
         }
     }
 }

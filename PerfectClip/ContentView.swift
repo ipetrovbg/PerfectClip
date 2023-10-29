@@ -7,68 +7,48 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        
-        VStack {
-            
-            Image(systemName: "paperclip.circle.fill")
-                .resizable()
-                .frame(width: 30, height: 30)
-                .padding(.bottom)
-            
-            Text("Perfect Clipboard Manager")
-                .font(.headline)
-                .padding(.bottom)
-            
-        }
-        .padding(.top)
 
-        Spacer()
-        
-        VStack {
-            
-            HStack {
-                Text("Shortcuts:")
-                Spacer()
-                
-            }
-            Divider()
-            
+struct ContentView: View {
+    @State var selectedView = "clips"
+    var screen = NSScreen.main!.visibleFrame
+    var body: some View {
+        HStack(spacing: 0) {
             VStack {
-                HStack {
-                    Text("Cmd + Shift + Space")
-                    Spacer()
-                    Text("open the menu")
-                        .font(.subheadline)
+                VStack(spacing: 0) {
+                    
+                    TabButton(selected: $selectedView, title: "Clips", icon: "paperclip.circle.fill", id: "clips")
+//                        .border(width: 1, edges: [.bottom], color: .white)
+                    
+
+                    TabButton(selected: $selectedView, title: "About", icon: "paperclip.circle.fill", id: "about")
+//                        .border(width: 1, edges: [.bottom], color: .white)
+                    
                     
                 }
-            }
-            Divider()
-            HStack {
-                Text("↑↓ arrows")
                 Spacer()
-                Text("navigation")
-                    .font(.subheadline)
             }
-            Divider()
-            VStack {
-                HStack {
-                    Text("Cmd + C")
-                    Spacer()
-                    Text("copy current item")
-                        .font(.subheadline)
-                    
+            .background(Color.accentColor)
+            
+            ZStack {
+                switch selectedView {
+                case "about":
+                    HomeView()
+                case "clips":
+                    ClipsListView()
+                default: HomeView()
                 }
-                
-            }
-        }.padding()
+            }.frame(maxWidth: .infinity, maxHeight: .infinity)
+
+        }
         
+        .frame(minWidth: 500, minHeight: 400)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+        }
     }
 }
